@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      <demo-navigation></demo-navigation>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,7 +8,17 @@
     <router-view/>
   </div>
 </template>
+<script>
+    import DemoNavigation from './components/DemoNavigation'
 
+    export default {
+        name:'app',
+        components: {DemoNavigation},
+        component:{
+            DemoNavigation
+        }
+    }
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
